@@ -30,14 +30,12 @@ body{
     font-size: 62.5%; 
     width: 100%;
     overflow-x: hidden;
-    @include mobile{
-        background: aqua;
-    }
+    text-overflow: ellipsis;
 }
 #loader-overlay{
-    position: fixed;
+    position: fixed !important;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     background: #000;
@@ -55,8 +53,9 @@ body{
         background: linear-gradient(90deg, #000, #fff, #000);
         background-repeat: no-repeat;
         background-size: 80%;
+        background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.09);
         animation: shine 3s linear infinite;        
     }
 }
@@ -175,31 +174,41 @@ nav{
 }
 #main{
     margin-top: 10vh;
+    width: 100%;
 }
 header{
     height: 90vh;
     width: 100%;   
-  
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
-
     .principal{
         height: 50vh;
-        margin-top: 10vh;
+        padding-top: -10vh;
         text-align: center;
         h1{
             font-size: 3.4rem;
             margin: 0;
             padding-top: 4rem;
+            @include mobile{
+                font-size: 2.2rem;
+                padding-top: 5rem;
+            }
         }
         p{
             font-size: 2.2rem;
             margin: 0;
             font-weight: 300;
+            @include mobile{
+                font-size: 1.4rem;
+            }
         }
         img{
            width: 5rem;
            padding-top: 5vh;
            animation: down-and-down 0.8s ease-in-out infinite;
+           @include mobile{
+               width: 3.6rem;
+               padding-top: 3.5vh;
+           }
         }
     }
     .parallax{
@@ -224,7 +233,12 @@ header{
             font-weight: 220;
             text-align: center;
             margin:0px auto;
-            padding: 4rem;
+            display: flex;
+            align-items: center;
+            @include mobile{
+                font-size: 1rem;
+                font-weight: 150;
+            }
         }
     }
 }
@@ -232,9 +246,16 @@ header{
 
 #sec1{
     height: 90vh;
-    // background: rgba(0, 0, 0, 0.3);
     position: relative;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    @include mobile{
+        display: grid;
+        grid-template-areas: 
+        'headline'
+        'para'
+        'img-container';
+        height: auto;
+    }
     .headline{
         width: 100%;
         background: #000;
@@ -242,27 +263,45 @@ header{
         top: 10vh;
         color: #fff;
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+        @include mobile{
+            grid-area: headline;
+            top: 3vh;
+        }
         h1{
             font-size: 2.4rem;
             margin: 0;
             padding-top:1rem;
+            @include mobile{
+                font-size: 1.75rem;
+            }
         }
         h3{
             font-size: 1.8rem;
             margin: 0;
             color: var(--pop);
             padding-bottom:1rem;
+            @include mobile{
+                font-size: 1.5rem;
+            }
         }
     }
     .para{
-        
             font-size: 1.3rem;
             position: relative;
             top: 15vh;
             width: 50%;
             left: 5%;
             font-weight: 300;
-        
+            @include mobile{
+                grid-area: para;
+                top: 5vh;
+                width: 90%;
+                height: 100%;
+                margin: 0;
+                font-size: 1rem;
+                height: 100%;
+                position: inherit;
+            }
         
     }
     .img-container{
@@ -276,49 +315,88 @@ header{
         z-index: 1;
         background-image: url(assets/volcano.jpg);
         background-size: cover;
+        @include mobile{
+            grid-area: img-container;
+            float: none;
+            margin: 0px auto;
+            top: 8vh;
+            height: 30vh; 
+            width: 90%;
+            background-position: center;
+            margin-bottom: 13vh;
+        }
     }
 
 }
 #sec2{
     height: 90vh;
-    // background: rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: right;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
-
+    @include mobile{
+        text-align: left;
+        grid-template-areas: 
+        'headline'
+        'para'
+        'img-container';
+        height: 100%;
+    }
     .headline{
         width: 100%;
         background: #000;
         position: relative;
         top: 10vh;
         color: #fff;
+        @include mobile{
+            grid-area: headline;
+            top: 3vh; 
+        }
         h1{
             font-size: 2.4rem;
             margin: 0;
             padding-top:1rem;
+            padding-left: 35%;
+            padding-right: 5%;
+            @include mobile{
+                font-size: 1.75rem;
+                padding-left: 5%;
+            }
         }
         h3{
             font-size: 1.8rem;
             margin: 0;
             color: var(--pop);
             padding-bottom:1rem;
+            padding-right: 5%;
+            @include mobile{
+                font-size: 1.5rem;
+                padding-left: 5%;
+            }
         }
     }
     .para{
-        
-            font-size: 1.3rem;
-            position: absolute;
-            top: 30vh;
-            width: 50%;
-            right: 5%;
-            font-weight: 300;
-        
+        font-size: 1.3rem;
+        position: absolute;
+        top: 35vh;
+        width: 50%;
+        right: 5%;
+        font-weight: 300;
+        @include mobile{
+            grid-area: para;
+            position: relative;
+            top: 5vh;
+            width: 90%;
+            left: 0;
+            margin-left: 5%;
+            height: 100%;
+            font-size: 1rem;
+        }
     }
     .img-container{
         height: 90vh;
         width: 30%;
         background: #000;
-        position: relative;
+        position: absolute;
         top: 0;
         float: left;
         margin-left: 5%;
@@ -327,6 +405,17 @@ header{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%;
+        @include mobile{
+            grid-area: img-container;
+            position: relative;
+            float: initial;
+            margin: 0px auto;
+            top: 8vh;
+            height: 30vh; 
+            width: 90%;
+            background-position: center 85%;
+            margin-bottom: 13vh;
+        }
     }
 }
 
@@ -436,7 +525,6 @@ header{
     // background: rgb(206, 206, 206);
     position: relative;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
-
     .about{
         width: 50%;
         height: 80vh;
@@ -523,6 +611,10 @@ header{
                     font-size: 1.5rem;
                     margin: 0;
                     padding: 16px;
+                    font-weight: 300;
+                    span{
+                        font-style: oblique;
+                    }
                 }
             }
             .form-inputs{
