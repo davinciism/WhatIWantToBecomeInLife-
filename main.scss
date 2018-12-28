@@ -65,16 +65,16 @@ body{
 }
 
 .sidenav {
-    height: 100vh; /* 100% Full-height */
-    width: 30%; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Stay on top */
+    height: 100vh; 
+    width: 30%; 
+    position: fixed; 
+    z-index: 100; 
     top: 0;
     left: -30%;
-    background-color: #000; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s left ease-in-out; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #000; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s left ease-in-out; 
     display: flex;
     flex-direction: column;
     justify-content: center;
