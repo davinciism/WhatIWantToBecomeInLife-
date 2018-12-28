@@ -149,6 +149,9 @@ nav{
             padding: 0.2rem;
             font-weight: 800;
             font-style: oblique;
+            @include mobile{
+                margin-right: -8px;
+            }
             img{
                 height: 2.4rem;
                 margin: auto 0px;
@@ -164,6 +167,7 @@ nav{
             margin: auto 0px;
             margin-top: 4px;
         }
+       
     }
     .left:hover{
         cursor: pointer;
@@ -422,10 +426,12 @@ header{
 #sec3{
     height: 90vh;
     width: 100%;
-    // background: rgb(206, 206, 206);
     position: relative;
     text-align: left;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    @include mobile{
+        height: 155vh;
+    }
     .flex-text{
         width: 50%;
         display: flex;
@@ -434,16 +440,35 @@ header{
         left: 5%;
         top: 50%;
         transform: translateY(-35%);
+        @include mobile{
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            top: 24vh;;
+            height: auto;
+        }
         .text{
             height: 90vh;
             width: 100%; 
             position: relative;
-    
+            @include mobile{
+                height: auto;
+            }
             .headline{
+                @include mobile{
+                    background: #000;
+                    color:#fff;
+                    margin-left: -5%;
+                }
                 h1{
                     font-size: 2.4rem;
                     margin: 0;
                     padding-top: 1rem;
+                    @include mobile{
+                        font-size: 1.75rem;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
                 }
                 h3{
                     font-size: 1.8rem;
@@ -451,13 +476,27 @@ header{
                     color: var(--pop);
                     padding-bottom: 1rem;
                     padding-right: 1rem;
+                    @include mobile{
+                        font-size: 1.5rem;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                    }
                 }
             
             }
             .para{
                 margin: 0;
                 font-size: 1.3rem;
-                font-weight: 300;    
+                font-weight: 300;   
+                @include mobile{
+                    position: relative;
+                    top: 3vh;
+                    width: 90%;
+                    left: -5%;
+                    margin-left: 5%;
+                    height: 100%;
+                    font-size: 1rem;
+                } 
             }
     
         }
@@ -466,12 +505,19 @@ header{
     .quotes{
         width: 40%;
         height: 90vh;
-        // background: rgb(206, 206, 206);
         position: relative;
         top: 0;
         right: 0;
         float: right;
-        
+        @include mobile{
+            width: 90%;
+            margin: 0px auto;
+            left: 2.5%;
+            float: none;
+            height: auto;
+            position: absolute;
+            top: 55vh;
+        }
         .quote{
             display: inline-block;
             width: 100%;
@@ -479,16 +525,40 @@ header{
             height: 15vh;
             margin-top: 15vh;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-            // transition: box-shadow 0.5s ease-in;
             border-left: 3px solid var(--pop);
+            @include mobile{
+                height: auto;
+                border-left: 0px;
+                box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+                padding: 5px;
+                .img{
+                    height: 12vh;
+                    width: 12vh;
+                    border-radius: 50%;
+                    background-image: url(assets/hawking.jpg);
+                    background-size: cover;
+                    float: left;
+                }
+                .img:hover{
+                    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+                }
+            }
             img{
-                height: 100%;
+                height: 16vh;
                 float: left;
                 padding-right: 0.8rem;
+                @include mobile{
+                    display: none;
+                }
             }
             h4{
                 font-size: 1.4rem;
                 margin: 0;
+                @include mobile{
+                    float: right;
+                    width: 65%;
+                    padding-top: 1rem;
+                }
             }
             p{
                 font-size: 1rem;
@@ -496,6 +566,11 @@ header{
                 margin: 0;
                 padding-top: 4px;
                 padding-right: 3vw;
+                @include mobile{
+                    display: inline-block;
+                    padding-right: 0;
+                    font-weight: 300;
+                }
             }
             
         }
@@ -505,31 +580,59 @@ header{
             width: 120%;
             position: relative;
             transform: translateX(-10%);
+            @include mobile{
+                width: 100%;
+                transform: translateX(0%);
+                .img{
+                    background-image: url(assets/N.Tesla.JPG);
+                }
+            }
             p{
                 padding-right: 20%;
+                @include mobile{
+                    padding-right: 0px;
+                }
             }
         }
         .quote:nth-child(3){
             margin-top: 5vh;
+            @include mobile{
+                .img{
+                    background-image: url(assets/albert.jpg);
+                }
+            }
         }
         .quote:hover{
             box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.3);
             cursor: pointer;
             transition: 0.25s box-shadow ease-in-out;
+            @include mobile{
+                box-shadow: none;
+                cursor: initial;
+            }
         }
     }
 }
 #contact{
     height: 90vh;
     width: 100%;
-    // background: rgb(206, 206, 206);
     position: relative;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    @include mobile{
+        height: 220vh;
+    }
     .about{
         width: 50%;
         height: 80vh;
         float: right;
         padding: 10px;
+        @include mobile{
+            width: 90%;
+            float: left;
+            padding: 0px;
+            position: absolute;
+            top: 5vh;
+        }
         .top{
             position: relative;
             height: 30vh;
@@ -539,6 +642,9 @@ header{
             color: #fff;
             box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
             border-right: 2.5px solid var(--pop);
+            @include mobile{
+                display: none;
+            }
             .left{
                 display: inline-block;
                 width: 30%;
@@ -572,11 +678,53 @@ header{
                 }
             }
         }
+        .profile-card{
+            display: none;
+            @include mobile{
+                display: block;
+                height: 50vh;
+                width: 100%;
+                background: #000;
+                background-image: url(assets/me.jpg);
+                background-size: cover;
+                color: #fff;
+                position: relative;
+                .info{
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    text-align: center;
+                    h1{
+                        font-size: 1.6rem;
+                        margin: 0;
+                    }
+                    h4{
+                        font-size: 0.6rem;
+                        margin: 0;
+                        color: #ff516e;
+                        padding-bottom: 4px;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        font-style: oblique; 
+                        margin: 0;
+                        padding: 8px;
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+        
         .bottom{
             height: 30vh;
             width: 100%;
             padding-top: 1.4rem;
             text-align: left;
+            @include mobile{
+                position: relative;
+                top: -2vh;
+            }
             p{
                 font-size: 1rem;
                 font-weight: 300;
@@ -587,6 +735,13 @@ header{
         width: 50%;
         height: 80vh;
         float: left;
+        position: relative;
+        @include mobile{
+            width: 100%;
+            top: 142vh;
+            float: right;
+            height: 60vh;
+        }
         .card{
             display: inline-block;
             width: 75%;
@@ -597,6 +752,11 @@ header{
             perspective: 1000px;
             perspective-origin: center;
             margin: 10px;
+            @include mobile{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
             .header{
                 height: 15vh;
                 width: 100%;
@@ -618,17 +778,25 @@ header{
                 }
             }
             .form-inputs{
-                // background: #fff;
                 width: 100%;
                 height: 85%;
                 padding: auto 10px ;
                 position: relative;
+                @include mobile{
+                    height: 45vh;
+                }
                 .send{
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -60%);
                     width: 100%;
+                    @include mobile{
+                        height: 45vh;
+                        top: 0;
+                        left: 0;
+                        transform: translateY(0%);
+                    }
                     input, textarea{
                         display: block;
                         width: 90%;
@@ -650,6 +818,10 @@ header{
                         border: none;
                         background: #000;
                         color: #fff;
+                        @include mobile{
+                            width: 100%;
+                            margin: 0;
+                        }
                         span{
                             font-size: 1rem;
                         }
@@ -674,18 +846,45 @@ header{
         bottom: 0;
         color: #fff;
         font-size: 0.8rem;
-
+        @include mobile{
+            height: 12vh;
+        }
+        .mobile-footer{
+            display: none;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .up{
+                    animation: up-and-up 0.8s ease-in-out infinite;
+                    padding: 8px;
+                }
+                p{
+                    margin: 0;
+                    padding-bottom: 2px;
+                }
+                .line{
+                    opacity: 0.7;
+                }
+            }
+        }
         .left{
             float: left;
             display: flex;
             justify-content: center;
             align-items: center;
+            @include mobile{
+                display: none;
+            }
         }
         .right{
             float: right;
             display: flex;
             justify-content: center;
             align-items: center;
+            @include mobile{
+                display: none;
+            }
             a{
                 padding-left: 12px;
                 animation: up-and-up 0.8s ease-in-out infinite;

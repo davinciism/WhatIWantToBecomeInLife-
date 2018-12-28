@@ -200,6 +200,12 @@ nav a .logo {
   font-style: oblique;
 }
 
+@media (max-width: 415px) {
+  nav a .logo {
+    margin-right: -8px;
+  }
+}
+
 nav a .logo img {
   height: 2.4rem;
   margin: auto 0px;
@@ -544,6 +550,12 @@ header .parallax #parallax-para {
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 415px) {
+  #sec3 {
+    height: 155vh;
+  }
+}
+
 #sec3 .flex-text {
   width: 50%;
   display: -webkit-box;
@@ -559,16 +571,48 @@ header .parallax #parallax-para {
           transform: translateY(-35%);
 }
 
+@media (max-width: 415px) {
+  #sec3 .flex-text {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 24vh;
+    height: auto;
+  }
+}
+
 #sec3 .flex-text .text {
   height: 90vh;
   width: 100%;
   position: relative;
 }
 
+@media (max-width: 415px) {
+  #sec3 .flex-text .text {
+    height: auto;
+  }
+}
+
+@media (max-width: 415px) {
+  #sec3 .flex-text .text .headline {
+    background: #000;
+    color: #fff;
+    margin-left: -5%;
+  }
+}
+
 #sec3 .flex-text .text .headline h1 {
   font-size: 2.4rem;
   margin: 0;
   padding-top: 1rem;
+}
+
+@media (max-width: 415px) {
+  #sec3 .flex-text .text .headline h1 {
+    font-size: 1.75rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 #sec3 .flex-text .text .headline h3 {
@@ -579,10 +623,30 @@ header .parallax #parallax-para {
   padding-right: 1rem;
 }
 
+@media (max-width: 415px) {
+  #sec3 .flex-text .text .headline h3 {
+    font-size: 1.5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 #sec3 .flex-text .text .para {
   margin: 0;
   font-size: 1.3rem;
   font-weight: 300;
+}
+
+@media (max-width: 415px) {
+  #sec3 .flex-text .text .para {
+    position: relative;
+    top: 3vh;
+    width: 90%;
+    left: -5%;
+    margin-left: 5%;
+    height: 100%;
+    font-size: 1rem;
+  }
 }
 
 #sec3 .quotes {
@@ -592,6 +656,18 @@ header .parallax #parallax-para {
   top: 0;
   right: 0;
   float: right;
+}
+
+@media (max-width: 415px) {
+  #sec3 .quotes {
+    width: 90%;
+    margin: 0px auto;
+    left: 2.5%;
+    float: none;
+    height: auto;
+    position: absolute;
+    top: 55vh;
+  }
 }
 
 #sec3 .quotes .quote {
@@ -605,15 +681,51 @@ header .parallax #parallax-para {
   border-left: 3px solid var(--pop);
 }
 
+@media (max-width: 415px) {
+  #sec3 .quotes .quote {
+    height: auto;
+    border-left: 0px;
+    -webkit-box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+  }
+  #sec3 .quotes .quote .img {
+    height: 12vh;
+    width: 12vh;
+    border-radius: 50%;
+    background-image: url(assets/hawking.jpg);
+    background-size: cover;
+    float: left;
+  }
+  #sec3 .quotes .quote .img:hover {
+    -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
 #sec3 .quotes .quote img {
-  height: 100%;
+  height: 16vh;
   float: left;
   padding-right: 0.8rem;
+}
+
+@media (max-width: 415px) {
+  #sec3 .quotes .quote img {
+    display: none;
+  }
 }
 
 #sec3 .quotes .quote h4 {
   font-size: 1.4rem;
   margin: 0;
+}
+
+@media (max-width: 415px) {
+  #sec3 .quotes .quote h4 {
+    float: right;
+    width: 65%;
+    padding-top: 1rem;
+  }
 }
 
 #sec3 .quotes .quote p {
@@ -624,6 +736,14 @@ header .parallax #parallax-para {
   padding-right: 3vw;
 }
 
+@media (max-width: 415px) {
+  #sec3 .quotes .quote p {
+    display: inline-block;
+    padding-right: 0;
+    font-weight: 300;
+  }
+}
+
 #sec3 .quotes .quote:nth-child(2) {
   margin-top: 5vh;
   width: 120%;
@@ -632,12 +752,35 @@ header .parallax #parallax-para {
           transform: translateX(-10%);
 }
 
+@media (max-width: 415px) {
+  #sec3 .quotes .quote:nth-child(2) {
+    width: 100%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  #sec3 .quotes .quote:nth-child(2) .img {
+    background-image: url(assets/N.Tesla.JPG);
+  }
+}
+
 #sec3 .quotes .quote:nth-child(2) p {
   padding-right: 20%;
 }
 
+@media (max-width: 415px) {
+  #sec3 .quotes .quote:nth-child(2) p {
+    padding-right: 0px;
+  }
+}
+
 #sec3 .quotes .quote:nth-child(3) {
   margin-top: 5vh;
+}
+
+@media (max-width: 415px) {
+  #sec3 .quotes .quote:nth-child(3) .img {
+    background-image: url(assets/albert.jpg);
+  }
 }
 
 #sec3 .quotes .quote:hover {
@@ -650,6 +793,14 @@ header .parallax #parallax-para {
   transition: 0.25s box-shadow ease-in-out, 0.25s -webkit-box-shadow ease-in-out;
 }
 
+@media (max-width: 415px) {
+  #sec3 .quotes .quote:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: initial;
+  }
+}
+
 #contact {
   height: 90vh;
   width: 100%;
@@ -658,11 +809,27 @@ header .parallax #parallax-para {
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 415px) {
+  #contact {
+    height: 220vh;
+  }
+}
+
 #contact .about {
   width: 50%;
   height: 80vh;
   float: right;
   padding: 10px;
+}
+
+@media (max-width: 415px) {
+  #contact .about {
+    width: 90%;
+    float: left;
+    padding: 0px;
+    position: absolute;
+    top: 5vh;
+  }
 }
 
 #contact .about .top {
@@ -677,6 +844,12 @@ header .parallax #parallax-para {
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
   border-right: 2.5px solid var(--pop);
+}
+
+@media (max-width: 415px) {
+  #contact .about .top {
+    display: none;
+  }
 }
 
 #contact .about .top .left {
@@ -716,11 +889,59 @@ header .parallax #parallax-para {
   font-style: oblique;
 }
 
+#contact .about .profile-card {
+  display: none;
+}
+
+@media (max-width: 415px) {
+  #contact .about .profile-card {
+    display: block;
+    height: 50vh;
+    width: 100%;
+    background: #000;
+    background-image: url(assets/me.jpg);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+  }
+  #contact .about .profile-card .info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }
+  #contact .about .profile-card .info h1 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  #contact .about .profile-card .info h4 {
+    font-size: 0.6rem;
+    margin: 0;
+    color: #ff516e;
+    padding-bottom: 4px;
+  }
+  #contact .about .profile-card .info p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: oblique;
+    margin: 0;
+    padding: 8px;
+    padding-top: 0;
+  }
+}
+
 #contact .about .bottom {
   height: 30vh;
   width: 100%;
   padding-top: 1.4rem;
   text-align: left;
+}
+
+@media (max-width: 415px) {
+  #contact .about .bottom {
+    position: relative;
+    top: -2vh;
+  }
 }
 
 #contact .about .bottom p {
@@ -732,6 +953,16 @@ header .parallax #parallax-para {
   width: 50%;
   height: 80vh;
   float: left;
+  position: relative;
+}
+
+@media (max-width: 415px) {
+  #contact .form {
+    width: 100%;
+    top: 142vh;
+    float: right;
+    height: 60vh;
+  }
 }
 
 #contact .form .card {
@@ -748,6 +979,14 @@ header .parallax #parallax-para {
   -webkit-perspective-origin: center;
           perspective-origin: center;
   margin: 10px;
+}
+
+@media (max-width: 415px) {
+  #contact .form .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
 }
 
 #contact .form .card .header {
@@ -786,6 +1025,12 @@ header .parallax #parallax-para {
   position: relative;
 }
 
+@media (max-width: 415px) {
+  #contact .form .card .form-inputs {
+    height: 45vh;
+  }
+}
+
 #contact .form .card .form-inputs .send {
   position: absolute;
   top: 50%;
@@ -793,6 +1038,16 @@ header .parallax #parallax-para {
   -webkit-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%);
   width: 100%;
+}
+
+@media (max-width: 415px) {
+  #contact .form .card .form-inputs .send {
+    height: 45vh;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 #contact .form .card .form-inputs .send input, #contact .form .card .form-inputs .send textarea {
@@ -818,6 +1073,13 @@ header .parallax #parallax-para {
   border: none;
   background: #000;
   color: #fff;
+}
+
+@media (max-width: 415px) {
+  #contact .form .card .form-inputs .send button {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 #contact .form .card .form-inputs .send button span {
@@ -846,6 +1108,43 @@ header .parallax #parallax-para {
   font-size: 0.8rem;
 }
 
+@media (max-width: 415px) {
+  #contact footer {
+    height: 12vh;
+  }
+}
+
+#contact footer .mobile-footer {
+  display: none;
+}
+
+@media (max-width: 415px) {
+  #contact footer .mobile-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact footer .mobile-footer .up {
+    -webkit-animation: up-and-up 0.8s ease-in-out infinite;
+            animation: up-and-up 0.8s ease-in-out infinite;
+    padding: 8px;
+  }
+  #contact footer .mobile-footer p {
+    margin: 0;
+    padding-bottom: 2px;
+  }
+  #contact footer .mobile-footer .line {
+    opacity: 0.7;
+  }
+}
+
 #contact footer .left {
   float: left;
   display: -webkit-box;
@@ -859,6 +1158,12 @@ header .parallax #parallax-para {
           align-items: center;
 }
 
+@media (max-width: 415px) {
+  #contact footer .left {
+    display: none;
+  }
+}
+
 #contact footer .right {
   float: right;
   display: -webkit-box;
@@ -870,6 +1175,12 @@ header .parallax #parallax-para {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 415px) {
+  #contact footer .right {
+    display: none;
+  }
 }
 
 #contact footer .right a {
